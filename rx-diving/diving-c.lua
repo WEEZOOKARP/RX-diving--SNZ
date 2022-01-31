@@ -54,7 +54,7 @@ Citizen.CreateThread(function()
         local e_key = 38
         local playerPed = PlayerPedId()
         local playerCoords = GetEntityCoords(playerPed)
-        randomMaterial = (materials[math.random(#materials)])
+        local randomMaterial = (materials[math.random(#materials)])
         local chance = math.random(1,100)
         local wait = 1000
         
