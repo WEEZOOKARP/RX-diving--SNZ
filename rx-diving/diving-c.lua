@@ -64,18 +64,18 @@ Citizen.CreateThread(function()
               DrawText3Ds(matspot.x, matspot.y, matspot.z, "[E] Pick-Up materials")
               if IsControlJustReleased(1, e_key) and #(playerCoords - matspot) < 1.5 then
               randomMaterial = (materials[math.random(#materials)])
-                if Config.notification == "SNZ" then
+                if Config.Notification == "SNZ" then
                     TriggerEvent('SNZ_UI:AddNotification', 'You found', '1x '.. randomMaterial, 5000, 'fas fa-inbox')            
-                elseif Config.notification == "QBCore" then
+                elseif Config.Notification == "QBCore" then
                     QBCore.Functions.Notify('You Found x1 ' .. randomMaterial)        
                 end
                     
             if randomMaterial ~= nil then
                 TriggerServerEvent('qb-diving:server:giveItem', randomMaterial)
             else
-            if Config.notification == "SNZ" then
+            if Config.Notification == "SNZ" then
                 TriggerEvent('SNZ_UI:AddNotification', 'You found', 'Nothing", 5000, 'fas fa-inbox')   
-            elseif Config.notification == "QBCore" then
+            elseif Config.Notification == "QBCore" then
                 QBCore.Functions.Notify('You Found Nothing ')
             end
               Wait(1000)
