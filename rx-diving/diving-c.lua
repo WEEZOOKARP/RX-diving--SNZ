@@ -40,7 +40,7 @@ Citizen.CreateThread(function()
         SetBlipDisplay(blip, 6)
         SetBlipScale(blip, 0.8)
         BeginTextCommandSetBlipName("STRING")
-        AddTextComponentString("Recked Ship")
+        AddTextComponentString("Wrecked Ship")
         SetBlipAsShortRange(blip, true)
         EndTextCommandSetBlipName(blip)
     end
