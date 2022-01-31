@@ -25,11 +25,11 @@ local divingSite = {
 }
 
   local materials = {
-    [1] = ('Glass'),
-    [2] = ('Rubber'),
-    [3] = ('Steel'),
-    [4] = ('Aluminum'),
-    [5] = ('MetalScrap')
+    [1] = ('glass'),
+    [2] = ('rubber'),
+    [3] = ('steel'),
+    [4] = ('aluminum'),
+    [5] = ('metalScrap')
 }
 
 
@@ -54,7 +54,7 @@ Citizen.CreateThread(function()
         local e_key = 38
         local playerPed = PlayerPedId()
         local playerCoords = GetEntityCoords(playerPed)
-        local randomMaterial = (materials[math.random(#materials)])
+        randomMaterial = (materials[math.random(#materials)])
         local chance = math.random(1,100)
         local wait = 1000
         
@@ -86,7 +86,7 @@ function DrawText3Ds(x,y,z, text)
     local onScreen,_x,_y=World3dToScreen2d(x,y,z)
     local px,py,pz=table.unpack(GetGameplayCamCoords())
     
-    SetTextScale(0.35, 0.35) -- 0.35
+    SetTextScale(0.35, 0.35)
     SetTextFont(4)
     SetTextProportional(1)
     SetTextColour(255, 255, 255, 215)
