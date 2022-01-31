@@ -29,7 +29,7 @@ local divingSite = {
     [2] = ('rubber'),
     [3] = ('steel'),
     [4] = ('aluminum'),
-    [5] = ('metalScrap')
+    [5] = ('metalscrap')
 }
 
 
