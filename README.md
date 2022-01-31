@@ -1,5 +1,5 @@
 
-Diving Script for QB
+Diving Script for QB Inspired By LegacyRP
 
 I am by no means saying this is the best way to do this, this is my first script and am open to improvments.
 Adjust/Edit whereever you see fit.
@@ -8,7 +8,7 @@ Adjust/Edit whereever you see fit.
 RX-diving
 * Gives materials and a chance for a 'rare' item
 * Idles at 0.00ms
-* Havent seen it go above 0.09ma
+* Havent seen it go above 0.09ms
 
 
 ## Screenshots
