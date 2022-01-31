@@ -9,6 +9,7 @@ RX-diving
 * Gives materials and a chance for a 'rare' item
 * Idles at 0.00ms
 * Havent seen it go above 0.09ms
+* Blip is on the right side of the map named "Recked Ship"
 
 
 ## Screenshots
