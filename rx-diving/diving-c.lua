@@ -8,20 +8,24 @@ local divingMaterialSpot = Config.divingspots
 
 local materials = Config.Materials
 
-Citizen.CreateThread(function()
-    for _, divingSites in ipairs(divingSite) do
-        local blip = AddBlipForCoord(divingSites.x, divingSites.y, divingSites.z)
-        SetBlipSprite(blip, 274)
-        SetBlipDisplay(blip, 6)
-        SetBlipScale(blip, 0.8)
-        BeginTextCommandSetBlipName("STRING")
-        AddTextComponentString("Recked Ship")
-        SetBlipAsShortRange(blip, true)
-        EndTextCommandSetBlipName(blip)
-    end
+local function createBlips()
+    Citizen.CreateThread(function()
+        for _, divingSites in ipairs(divingSite) do
+            local blip = AddBlipForCoord(divingSites.x, divingSites.y, divingSites.z)
+            SetBlipSprite(blip, 274)
+            SetBlipDisplay(blip, 6)
+            SetBlipScale(blip, 0.8)
+            BeginTextCommandSetBlipName("STRING")
+            AddTextComponentString("Wrecked Ship")
+            SetBlipAsShortRange(blip, true)
+            EndTextCommandSetBlipName(blip)
+        end
+    end)
+end
+
+RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
+    createBlips()
 end)
-
-
 
 local matspot = (divingMaterialSpot[math.random(#divingMaterialSpot)])
 Citizen.CreateThread(function()
