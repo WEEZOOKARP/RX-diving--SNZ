@@ -24,6 +24,8 @@ local divingSite = {
     [17] = vector3(3197.2004394531,-395.84091186523,-26.442941665649)
 }
 
+local materials = Config.Materials
+
 Citizen.CreateThread(function()
     for _, divingSites in ipairs(divingSite) do
         local blip = AddBlipForCoord(divingSites.x, divingSites.y, divingSites.z)
@@ -45,7 +47,7 @@ Citizen.CreateThread(function()
         local e_key = 38
         local playerPed = PlayerPedId()
         local playerCoords = GetEntityCoords(playerPed)
-        local randomMaterial = (Config.Materials[math.random(#Config.Materials)])
+        local randomMaterial = (materials[math.random(#materials)])
         local chance = math.random(1,100)
         local wait = 1000
         
@@ -54,7 +56,7 @@ Citizen.CreateThread(function()
               wait = 0
               DrawText3Ds(matspot.x, matspot.y, matspot.z, "[E] Pick-Up materials")
               if IsControlJustReleased(1, e_key) and #(playerCoords - matspot) < 1.5 then
-              randomMaterial = (Config.Materials[math.random(#Config.Materials)])
+              randomMaterial = (materials[math.random(#materials)])
                 if Config.Notification == "SNZ" then
                     TriggerEvent('SNZ_UI:AddNotification', 'You found', '1x '.. randomMaterial, 5000, 'fas fa-inbox')            
                 elseif Config.Notification == "QBCore" then
