@@ -40,7 +40,7 @@ local function createBlips()
             SetBlipDisplay(blip, 6)
             SetBlipScale(blip, 0.8)
             BeginTextCommandSetBlipName("STRING")
-            AddTextComponentString("Recked Ship")
+            AddTextComponentString("Wrecked Ship")
             SetBlipAsShortRange(blip, true)
             EndTextCommandSetBlipName(blip)
         end
@@ -49,7 +49,7 @@ end
 
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
     createBlips()
-end)
+
 
 local matspot = (divingMaterialSpot[math.random(#divingMaterialSpot)])
 Citizen.CreateThread(function()
