@@ -1,9 +1,9 @@
 
-Diving Script for QB which gives materials and gives a chance for a 'rare' item
+Diving Script for QB
 
 
 RX-diving
-* gives materials and gives a chance for a 'rare' item
+* gives materials and a chance for a 'rare' item
 
 
 ## Screenshots
