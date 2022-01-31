@@ -66,29 +66,11 @@ Citizen.CreateThread(function()
               randomMaterial = (materials[math.random(#materials)])
               QBCore.Functions.Notify('You Found x1 ' .. randomMaterial)
 
-              if randomMaterial == 'Glass' then
-              TriggerServerEvent('qb-diving:server:giveGlassItem')
+              if randomMaterial ~= nil then
+              TriggerServerEvent('qb-diving:server:giveItem', randomMaterial)
             else
-              if randomMaterial == 'Rubber' then
-                TriggerServerEvent('qb-diving:server:giveRubberItem')
-              else
-                if randomMaterial == 'Steel' then
-                  TriggerServerEvent('qb-diving:server:giveSteelItem')
-                else
-                  if randomMaterial == 'Aluminum' then
-                    TriggerServerEvent('qb-diving:server:giveAluminumItem')
-                  else
-                    if randomMaterial == 'MetalScrap' then
-                      TriggerServerEvent('qb-diving:server:giveMetalScrapItem')
-                    else
-                      if chance > 90 then
-                        TriggerServerEvent('qb-diving:server:giveGoldBarItem')
-                        end
-                      end
-                    end
-                  end
-                end
-              end
+              QBCore.Functions.Notify('You Found Nothing ')
+            end
               Wait(1000)
               matspot = (divingMaterialSpot[math.random(#divingMaterialSpot)])
            end
